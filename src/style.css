@@ -1,0 +1,129 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+.main {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.memes {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+}
+.header {
+    display: flex;
+    align-items: center;
+    height: 65px;
+    background: linear-gradient(90deg, #672280 1.18%, #A626D3 100%);
+    color: white;
+    padding: 20px;
+}
+.header_image {
+    height: 100%;
+    margin-right: 6px;
+}
+.header_title {
+    font-size: 1.25rem;
+    margin-right: auto;
+}
+.header_project {
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+.form {
+    display: grid;
+    grid-template: 40px 40px / 1fr 1fr;
+    gap: 1em;
+    padding: 1em;
+    overflow: hidden;
+}
+.form_button {
+    grid-column: 1 / -1;
+    border-radius: 5px;
+    background: linear-gradient(90.41deg, #711F8D 1.14%, #A818DA 100%);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.form_input {
+    border-radius: 5px;
+    border: 1px solid #D5D4D8;
+    text-indent: 5px;
+}
+.meme_image {
+    width: 100%;
+    object-fit: contain;
+    max-height: 500px;
+}
+.meme {
+    position: relative;
+}
+.meme_text {
+    position: absolute;
+    width: 80%;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 1em 0;
+    padding: 0 0.25em;
+    font-family: Impact, sans-serif;
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: 1px;
+    text-shadow:
+        2px 2px 0 #000,
+        -2px -2px 0 #000,
+        2px -2px 0 #000,
+        -2px 2px 0 #000,
+        0 2px 0 #000,
+        2px 0 0 #000,
+        0 -2px 0 #000,
+        -2px 0 0 #000,
+        2px 2px 5px #000;
+}
+.bottom {
+    bottom: 0;
+}
+.top {
+    top: 0;
+}
+.allMemes {
+    display: flex;
+    overflow-x: scroll;
+    margin-top: auto;
+    border-top: 5px solid black;
+}
+.box {
+    margin: 0 0.25em;
+    width: 100px;
+    height: 100px;
+}
+.box:hover {
+    cursor: pointer;
+}
+@media (max-width: 400px) {
+    .form, .header {
+        flex-direction: column;
+    }
+    .form {
+        display: flex;
+    }
+    .form_input, .form_button {
+        padding: 1em;
+    }
+    .header h2, .header h4 {
+        display: none;
+    }
+    .header img {
+        margin: 0;
+    }
+    .header {
+        align-items: center;
+    }
+}
